@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Mia Sitografia Material You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6200EE; /* Un viola profondo per il tocco Material You */
+            --primary-light: #BB86FC;
+            --primary-dark: #3700B3;
+            --secondary-color: #03DAC6; /* Un ciano-verde per l'accento */
+            --background-color: #F3EDF7; /* Sfondo chiaro e soft */
+            --surface-color: #FFFBFE; /* Superficie per le schede */
+            --on-primary: #FFFFFF;
+            --on-surface: #1C1B1F; /* Testo scuro sulla superficie */
+            --outline-color: #79747E;
+            --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            --border-radius: 16px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #D0BCFF;
+                --primary-light: #BB86FC;
+                --primary-dark: #4A00B3;
+                --secondary-color: #03DAC6;
+                --background-color: #1C1B1F;
+                --surface-color: #1C1B1F;
+                --on-primary: #381E72;
+                --on-surface: #E6E1E5;
+                --outline-color: #938F99;
+                --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--background-color);
+            color: var(--on-surface);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8em;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+        }
+
+        p.subtitle {
+            font-size: 1.2em;
+            color: var(--outline-color);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            padding-bottom: 40px;
+        }
+
+        .site-card {
+            background-color: var(--surface-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            border: 1px solid rgba(0, 0, 0, 0.05); /* Lieve bordo per separazione */
+        }
+
+        .site-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .site-card h2 {
+            font-size: 1.6em;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .site-card p {
+            font-size: 1em;
+            color: var(--on-surface);
+            line-height: 1.6;
+            flex-grow: 1; /* Permette alla descrizione di espandersi */
+            margin-bottom: 15px;
+        }
+
+        .site-card a {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--on-primary);
+            padding: 12px 24px;
+            border-radius: 20px; /* Bordi più arrotondati per i bottoni */
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1em;
+            text-align: center;
+            transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+            align-self: flex-start; /* Allinea il bottone a sinistra */
+        }
+
+        .site-card a:hover {
+            background-color: var(--primary-dark);
+            transform: scale(1.02);
+        }
+
+        .site-card a:active {
+            transform: scale(0.98);
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            color: var(--outline-color);
+            font-size: 0.9em;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+
+            .site-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sitografia</h1>
+    </header>
+
+    <div class="container" id="site-list">
+        <div class="site-card">
+            <h2>Wikipedia</h2>
+            <p>La storia di 4chan e le sue controversie</p>
+            <a href="https://it.wikipedia.org/wiki/4chan" target="_blank">Visita il Sito</a>
+        </div>
+
+        <div class="site-card">
+            <h2>Pirateria</h2>
+            <p>Un video dal canale di poldo che parla della pirateria</p>
+            <a href="https://youtu.be/wKHXxhqiG9A?list=PLNuUCImlwB9k7ZZarAurwDQqB8pXi4aNe" target="_blank">Guarda il video</a>
+        </div>
+
+        <div class="site-card">
+            <h2>Geopop</h2>
+            <p>Come funzionano i protocolli e la ricerca su internet</p>
+            <a href="https://www.geopop.it/come-funziona-internet-ecco-la-struttura-del-world-wide-web/" target="_blank">Visita il Sito</a>
+        </div>
+
+        <div class="site-card">
+            <h2>Internet Archive</h2>
+            <p>Un video dal canale di Poldo che parla di internet archive</p>
+            <a href="https://youtu.be/wsPuLXswIEo?list=PLNuUCImlwB9k7ZZarAurwDQqB8pXi4aNe" target="_blank">Guarda il video</a>
+        </div>
+
+        </div>
+
+    <footer>
+    </footer>
+
+    </body>
+</html>
